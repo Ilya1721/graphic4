@@ -1,25 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./css/main.css";
+import InputData from "./components/InputData";
+import blockImage from "./img/blockImage.png";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  inputDataFirst = [
+    0.39,
+    0.1,
+    0.6,
+    0.9,
+    0.88,
+    0.96,
+    0.01,
+    0.41,
+    0.86,
+    0.14,
+    0.26,
+    0.05,
+    0.03,
+    0.16,
+    0.22,
+    0.02,
+    0.29,
+    0.34,
+    0.55,
+    0.36,
+  ];
+
+  inputDataSecond = {
+    poss: [0.21, 0.47, 0.81, 0.02, 0.25],
+    cases: {
+      first: [1],
+      second: [1, 2],
+    },
+  };
+
+  render() {
+    return (
+      <div className="app">
+        <InputData
+          inputDataFirst={this.inputDataFirst}
+          inputDataSecond={this.inputDataSecond}
+          blockImage={blockImage}
+        />
+      </div>
+    );
+  }
 }
 
 export default App;
