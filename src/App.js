@@ -1,6 +1,7 @@
 import React from "react";
 import "./css/main.css";
 import InputData from "./components/InputData";
+import OutputData from "./components/OutputData";
 import blockImage from "./img/blockImage.png";
 
 class App extends React.Component {
@@ -30,8 +31,8 @@ class App extends React.Component {
   inputDataSecond = {
     poss: [0.21, 0.47, 0.81, 0.02, 0.25],
     cases: {
-      first: [1],
-      second: [1, 2],
+      first: [0],
+      second: [0, 1],
     },
   };
 
@@ -42,6 +43,10 @@ class App extends React.Component {
           inputDataFirst={this.inputDataFirst}
           inputDataSecond={this.inputDataSecond}
           blockImage={blockImage}
+        />
+        <OutputData
+          inputDataFirst={this.inputDataFirst}
+          inputDataSecond={this.inputDataSecond}
         />
       </div>
     );

@@ -13,8 +13,6 @@ class InputData extends React.Component {
   };
 
   render() {
-    console.log(this.inputDataFirst);
-    console.log(this.data);
     return (
       <div className="input-data">
         <h3>Початкові дані до задачі №1</h3>
@@ -85,12 +83,12 @@ class InputData extends React.Component {
               ))}
               <td>
                 {this.inputDataSecond.cases.first.map((c) => (
-                  <span>{c}, </span>
+                  <span key={c}>{c + 1}, </span>
                 ))}
               </td>
               <td>
                 {this.inputDataSecond.cases.second.map((c) => (
-                  <span>{c}, </span>
+                  <span key={c}>{c + 1}, </span>
                 ))}
               </td>
             </tr>
